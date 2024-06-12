@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHarbor: A Literary Exploration Engine</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://img.freepik.com/premium-photo/closeup-stack-office-notepads-with-colorful-sticky-page-markers-with-one-open-notepad-top_98862-4245.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: none; /* No background color */
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 8px;
+        }
+
+        select, input {
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BookHarbor: A Literary Exploration Engine</h1>
+    </header>
+    <main>
+        <form action="/search" method="post">
+            <label for="search_criteria">Select search criteria:</label>
+            <select id="search_criteria" name="search_criteria">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="genre">Genre</option>
+            </select>
+            <label for="user_input">Enter the search criteria (or 'exit' to quit):</label>
+            <input type="text" id="user_input" name="user_input" required>
+            <input type="submit" value="Search">
+        </form>
+    </main>
+</body>
+</html>
